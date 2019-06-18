@@ -2,10 +2,10 @@ var express = require("express");
 var router = express.Router();
 var path = require("path");
 
-var request = require("request");
+//var request = require("request");
 var cheerio = require("cheerio");
 
-var Note = require("../models/Note.js");
+var note = require("../models/Note.js");
 var article = require("../models/article.js")
 
 router.get("/", function (req, res) {
@@ -96,7 +96,7 @@ router.get("/readArticle/:id", function (req, res) {
 
     };
     article.findOne({ _id: articleId })
-        .populate("comment")
+        .populate("Note")
         .exec(function (err, doc) {
             if (err) {
                 console.log("Error: " + err);
