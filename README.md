@@ -2,11 +2,11 @@
 Mongoose/Cheerio
 All the News That's Fit to Scrape
 
-Axios
-Body-parser
-cheerio
-express
-express-handlebars
+Axios,
+Body-parser,
+cheerio,
+express,
+express-handlebars,
 mongoose
 
 
